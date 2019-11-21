@@ -694,6 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8283bef902bb1384d87b22a412bebb6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dropdown: {fileID: 1409708970}
   map: {fileID: 1073996903}
   block1: {fileID: 11400000, guid: 4d63f3496feb9f14ebc23ffde09bbad7, type: 2}
   block2: {fileID: 11400000, guid: c1756ebb60d18a2468496c76cac2a061, type: 2}
@@ -718,6 +719,30 @@ MonoBehaviour:
   block21: {fileID: 11400000, guid: f6496a5ac3ac55644b8e0d9b292b265c, type: 2}
   block22: {fileID: 11400000, guid: 5ef8c73dd465a9140b40dde5abd5c944, type: 2}
   block23: {fileID: 11400000, guid: adf9559ec9605ac4f91cd701a64bc0bd, type: 2}
+  tiles:
+  - {fileID: 11400000, guid: 4d63f3496feb9f14ebc23ffde09bbad7, type: 2}
+  - {fileID: 11400000, guid: c1756ebb60d18a2468496c76cac2a061, type: 2}
+  - {fileID: 11400000, guid: 73ee57337421cd540a836cda6592a872, type: 2}
+  - {fileID: 11400000, guid: 44f9198432bedeb4ab7f9f5308611ba8, type: 2}
+  - {fileID: 11400000, guid: b816a29d6f6cbd947bb66fc5cd7b9ead, type: 2}
+  - {fileID: 11400000, guid: 439014d2cab646d4f98129bfe22bceea, type: 2}
+  - {fileID: 11400000, guid: 52e77972e5d2e1b4ab42061bda91f49a, type: 2}
+  - {fileID: 11400000, guid: c1023700e7bf5b84cb9f8c7b0c6dac35, type: 2}
+  - {fileID: 11400000, guid: fb253d416da382f4a9d7eed00eb1b430, type: 2}
+  - {fileID: 11400000, guid: 644b7543af158004984a585b277179f9, type: 2}
+  - {fileID: 11400000, guid: 9135ce38c4f254247b7d771b3c800107, type: 2}
+  - {fileID: 11400000, guid: 86078b685184aec4287ac921687984fc, type: 2}
+  - {fileID: 11400000, guid: d844b869f118b92459bb0708c954af41, type: 2}
+  - {fileID: 11400000, guid: 2bc51030b1f48b449a012a3efc437b0c, type: 2}
+  - {fileID: 11400000, guid: b6bc666dcf0f51e47833485c51e8ef11, type: 2}
+  - {fileID: 11400000, guid: 22b78a06290fd5f44b74250c760b29a0, type: 2}
+  - {fileID: 11400000, guid: cc9b7fd15fa00014d8b9cf2232d6b1b7, type: 2}
+  - {fileID: 11400000, guid: 3b7778e3777539641ad41b870c4e4b40, type: 2}
+  - {fileID: 11400000, guid: 078f105d3eb9b7748b8f72ce7f952947, type: 2}
+  - {fileID: 11400000, guid: 18b4b8decde4df24087ee426705c6e76, type: 2}
+  - {fileID: 11400000, guid: f6496a5ac3ac55644b8e0d9b292b265c, type: 2}
+  - {fileID: 11400000, guid: 5ef8c73dd465a9140b40dde5abd5c944, type: 2}
+  - {fileID: 11400000, guid: adf9559ec9605ac4f91cd701a64bc0bd, type: 2}
   borderTile: {fileID: 11400000, guid: 74470f7009fb02242890de260454580e, type: 2}
 --- !u!4 &696108651
 Transform:
@@ -1119,7 +1144,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Block1
+  m_Text: Grass
 --- !u!222 &1139068910
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1496,51 +1521,51 @@ MonoBehaviour:
   m_Value: 0
   m_Options:
     m_Options:
-    - m_Text: Block1
+    - m_Text: Grass
       m_Image: {fileID: 0}
-    - m_Text: Block2
+    - m_Text: Blank
       m_Image: {fileID: 0}
-    - m_Text: Block3
+    - m_Text: Mushrooms
       m_Image: {fileID: 0}
-    - m_Text: Block4
+    - m_Text: Start
       m_Image: {fileID: 0}
-    - m_Text: Block5
+    - m_Text: Broken Stone (Yellow)
       m_Image: {fileID: 0}
-    - m_Text: Block6
+    - m_Text: Ladders
       m_Image: {fileID: 0}
-    - m_Text: Block7
+    - m_Text: Broken Stone (Grey)
       m_Image: {fileID: 0}
-    - m_Text: Block8
+    - m_Text: Leaves (Brown)
       m_Image: {fileID: 0}
-    - m_Text: Block9
+    - m_Text: Rock Pile
       m_Image: {fileID: 0}
-    - m_Text: Block10
+    - m_Text: Spike Small
       m_Image: {fileID: 0}
-    - m_Text: Block11
+    - m_Text: Snow
       m_Image: {fileID: 0}
-    - m_Text: Block12
+    - m_Text: Ice Rock
       m_Image: {fileID: 0}
-    - m_Text: Block13
+    - m_Text: Stone (Blue)
       m_Image: {fileID: 0}
-    - m_Text: Block14
+    - m_Text: Spike (Left)
       m_Image: {fileID: 0}
-    - m_Text: Block15
+    - m_Text: Stone (Blue)
       m_Image: {fileID: 0}
-    - m_Text: Block16
+    - m_Text: Wood Wall
       m_Image: {fileID: 0}
-    - m_Text: Block17
+    - m_Text: Leaves Green
       m_Image: {fileID: 0}
-    - m_Text: Block18
+    - m_Text: Platform (Large)
       m_Image: {fileID: 0}
-    - m_Text: Block19
+    - m_Text: Platform (Small)
       m_Image: {fileID: 0}
-    - m_Text: Block20
+    - m_Text: Dirt
       m_Image: {fileID: 0}
-    - m_Text: Block21
+    - m_Text: End
       m_Image: {fileID: 0}
-    - m_Text: Block22
+    - m_Text: Mossy Stone
       m_Image: {fileID: 0}
-    - m_Text: Block23
+    - m_Text: Spike (Large)
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:

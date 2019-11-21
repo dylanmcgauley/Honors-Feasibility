@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.UI;
 
 public class PaintMap : MonoBehaviour
 {
+    public Dropdown dropdown;
+
     public Tilemap map;
 
     // list of block types
@@ -32,6 +35,7 @@ public class PaintMap : MonoBehaviour
     public Tile block21;
     public Tile block22;
     public Tile block23;
+    public List<Tile> tiles;
     public Tile borderTile;
 
     private Tile currentTile;
@@ -42,8 +46,9 @@ public class PaintMap : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentTile = block1;
+        currentTile = tiles[0];
 
+        // set the borders for the paintable area 
         for (int x = -1; x < 16; x++)
         {
             map.SetTile(new Vector3Int(-1, x, 1), borderTile);
@@ -55,27 +60,40 @@ public class PaintMap : MonoBehaviour
             map.SetTile(new Vector3Int(x, -1, 1), borderTile);
             map.SetTile(new Vector3Int(x, 15, 1), borderTile);
         }
-
     }
 
     // Update is called once per frame
     void Update()
     {
+        // check for user input and set the new tile
         if (Input.GetMouseButton(0))
         {
             clickPos = map.WorldToCell(Camera.main.ScreenToWorldPoint(Input.mousePosition));
-            map.SetTile(clickPos, block1);
+            map.SetTile(clickPos, currentTile);
+        }
+        
+        // loop through to see which block is selected
+        for (int x = 0; x < 23; x++)
+        {
+            if (dropdown.value == x)
+            {
+                // set the current tile and break out
+                currentTile = tiles[x];
+                break;
+            }
         }
     }
 
     public void SaveToText()
     {
+        // open the text file, if it doesnt exist create it
         FileStream file = File.Open("Assets/Level/NewLevel.txt", FileMode.OpenOrCreate);
-        file.Close();
+        file.Close(); // close so the writer can open the file
         StreamWriter writer = new StreamWriter("Assets/Level/NewLevel.txt", true);
         // clear the level variable
         level = "";
 
+        // loop through the editable area and write the block data to a text file
         for (int x = 0; x < 100; x++)
         {
             for (int y = 0; y < 14; y++)
@@ -105,8 +123,10 @@ public class PaintMap : MonoBehaviour
                 else if (map.GetTile(new Vector3Int(x, y, 0)) == block23) writer.Write('_');
                 else if (!map.HasTile(new Vector3Int(x, y, 0))) writer.Write('.');
             }
+            // tell the text document to start a new line
             writer.Write('\n');
         }
+        // close the file so it can be opened in the next frame
         writer.Close();
     }
 }
